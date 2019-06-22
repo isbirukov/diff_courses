@@ -10,3 +10,8 @@
 '''
 
 mac = 'AAAA:BBBB:CCCC'
+mac = mac.strip().split(':')
+str1 = ''
+for el in mac:
+	str1 += bin(int(el, 16))[2:]
+print(str1)
