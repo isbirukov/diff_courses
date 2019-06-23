@@ -19,9 +19,16 @@ ip = ip.strip().split('.')
 mask = input_str[sep_ind+1:]
 print(ip)
 print(mask)
-str1 = """
+net_string = """
 Network:
 {:8} {:8} {:8} {:8}
 {:0>8b} {:0>8b} {:0>8b} {:0>8b}
 """
-print(str1.format(ip[0], ip[1], ip[2], ip[3], int(ip[0]), int(ip[1]), int(ip[2]), int(ip[3])))
+
+mask_string = """
+Mask
+{:8} {:8} {:8} {:8}
+{:0>8b} {:0>8b} {:0>8b} {:0>8b}
+"""
+ 
+print(net_string.format(ip[0], ip[1], ip[2], ip[3], int(ip[0]), int(ip[1]), int(ip[2]), int(ip[3])))
